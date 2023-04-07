@@ -37,6 +37,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: set user
+        run: npm config set user 0
+      - name: set unsafe pertm
+        run: npm config set unsafe-perm true
       - name: Build
         run: npm run build
       - name: Setup Pages
